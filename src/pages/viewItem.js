@@ -24,10 +24,6 @@ const SecondPage = (props) => (
                 src={url}
                 alt="Larger version"
                 title="Image from Unsplash"
-                style={{
-                  maxWidth: "80vw",
-                  maxHeight: "70vh"
-                }}
               />
             </center>
           </>

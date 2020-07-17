@@ -28,7 +28,6 @@ class Layout extends React.Component {
                 <div
                   style={{
                     margin: `0 auto`,
-                    maxWidth: "100vw",
                     padding: `0px 0px 1.45rem`,
                     paddingTop: 0,
                     paddingLeft: "2px",
