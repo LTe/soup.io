@@ -1,23 +1,30 @@
 const path = require(`path`)
-const fs = require('fs');
+const fs = require('fs')
 
 exports.createPages = ({ graphql, actions}) => {
     const { createPage } = actions
+    const URL = 'https://storage.googleapis.com/ltesoup/lte/'
 
     /* 
      * There are a few local images in this repo to show you how to fetch images with GraphQL.
      * In order to keep the repo small, the rest of the images are fetched from Unsplash by the client's
      * browser. Their URLs are stored in a text file. You don't want to fetch images like that in production.
      */
-    var rawRemoteUrls = JSON.parse(fs.readFileSync('content/images/remote_image_urls.json', 'utf8'));
-    const remoteImages = rawRemoteUrls.map(url => {
-        const thumbnailResizeParams = '?q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=300&h=300&fit=crop'
-        const largeResizeParams = '?w=1200&q=90'
-        return {
-            "l": url+largeResizeParams,
-            "s": url+thumbnailResizeParams
-        }
-    })
+    var rawRemoteUrls = JSON.parse(fs.readFileSync('content/data/lte.soup.io.json', 'utf8'));
+    const remoteImages = Object.values(rawRemoteUrls).map(page => {
+        return page.posts.map(post => {
+            var src = post.content.full_res_images && post.content.full_res_images[0]
+            if (src) {
+                var name = src.split('/').pop()
+                return {
+                    "l": URL + name,
+                    "s": URL + name
+                }
+            } else {
+                return []
+            }
+        })
+    }).flat(2)
 
     /* In production you should fetch your images with GraphQL like this: */
     return graphql(`

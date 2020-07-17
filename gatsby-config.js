@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/soup.io`,
   siteMetadata: {
     title: `Gatsby Starter Infinite Scroll`,
     description: `Need infinite scroll or pagination in your Gatsby project? This starter is for you.`,
@@ -11,12 +12,6 @@ module.exports = {
         isTSX: true, // defaults to false
         //jsxPragma: `jsx`, // defaults to "React" ??
         allExtensions: true
-      },
-    },
-    {
-      resolve: `gatsby-plugin-styled-jsx`,
-      options: {
-        jsxPlugins: ["styled-jsx-plugin-postcss"],
       },
     },
     `gatsby-plugin-react-helmet`,

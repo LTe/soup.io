@@ -29,7 +29,7 @@ export class GlobalState extends React.Component {
         this.hasMore = this.hasMore.bind(this)
         this.updateState = this.updateState.bind(this)
         this.isInitializing = this.isInitializing.bind(this)
-        
+
         /* State also contains metadata for items, e.g. state["page81"] (only contains keys for _received_ metadata) */
         this.state = {
             cursor: 0,
