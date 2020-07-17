@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: `/soup.io`,
   siteMetadata: {
-    title: `Gatsby Starter Infinite Scroll`,
+    title: `lte.soup.io`,
     description: `Need infinite scroll or pagination in your Gatsby project? This starter is for you.`,
     author: `baobabKoodaa`,
   },

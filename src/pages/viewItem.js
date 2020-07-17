@@ -20,9 +20,6 @@ const SecondPage = (props) => (
             <SEO title="Second Page" />
             <center>
               <br/><br/>
-
-              <p>This page exists to demonstrate behavior when you click back (infinite scroll state is maintained).</p>
-
               <img
                 src={url}
                 alt="Larger version"

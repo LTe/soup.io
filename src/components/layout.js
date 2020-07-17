@@ -24,31 +24,6 @@ class Layout extends React.Component {
         `}
         render={data => (
               <>
-                {/* GitHub Ribbon */}
-                <a href="https://github.com/baobabKoodaa/gatsby-starter-infinite-scroll">
-                  <img
-                    src={ribbon}
-                    alt="Fork me on GitHub"
-                    className="ribbon"
-                  >
-                  </img>
-                  <style jsx>{`
-                    .ribbon {
-                      position: fixed;
-                      top: 0;
-                      right: 0;
-                      border: 0;
-                      z-index: 1000;
-                      transition: 0.2s ease-in-out;
-
-                      :hover {
-                        transform: scale(1.2);
-                      }
-                    }
-                  `}
-                  </style>
-                </a>
-                
                 <Header siteTitle={data.site.siteMetadata.title} />
                 <div
                   style={{
