@@ -5,7 +5,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import 'typeface-open-sans/index.css'
 import "./layout.css"
-import ribbon from "../../static/forkme_right_orange_ff7600.png"
 
 class Layout extends React.Component {
 
@@ -28,6 +27,7 @@ class Layout extends React.Component {
                 <div
                   style={{
                     margin: `0 auto`,
+                    maxWidth: "100vw",
                     padding: `0px 0px 1.45rem`,
                     paddingTop: 0,
                     paddingLeft: "2px",

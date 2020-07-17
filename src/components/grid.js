@@ -23,7 +23,7 @@ const Grid = (props) => {
                 const lastFetchedPage = Math.min(g.cursor, props.pageContext.countPages)
                 for (; pageNum <= lastFetchedPage; pageNum++) {
                     /* For each page that we have fetched, but haven't received metadata for, render empty gridItems. */
-                    const expectedNumberOfItemsOnPage = numberOfItemsOnLatestPage
+                    const expectedNumberOfItemsOnPage = 0
                     for (j=0; j<expectedNumberOfItemsOnPage; j++) {
                         items.push(<GridItem key={"gi"+(i++)}/>)
                     }
@@ -53,7 +53,7 @@ const Grid = (props) => {
                 {`
                     .grid {
                         display: grid;
-                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
                         grid-gap: 1px;
                     }
 

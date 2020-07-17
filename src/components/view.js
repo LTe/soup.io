@@ -41,7 +41,7 @@ class View extends React.Component {
                 {/* Infinite Scroll */}
                 <InfiniteScroll
                     throttle={150}
-                    threshold={1800}
+                    threshold={100}
                     hasMore={g.hasMore(pageContext)}
                     onLoadMore={g.loadMore}
                 >
